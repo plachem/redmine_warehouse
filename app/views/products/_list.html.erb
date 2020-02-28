@@ -1,0 +1,26 @@
+<div class="autoscroll">
+  <table class="list issues">
+    <thead>
+    <tr>
+      <%= content_tag('th', h(l(:field_name))) %>
+      <%= content_tag('th', h(l(:field_price))) %>
+      <%= content_tag('th', h(l(:field_count))) %>
+      <%= content_tag('th', h(l(:field_manufacture_date))) %>
+      <%= content_tag('th', h(l(:field_price_full))) %>
+      <%= content_tag('th', h(l(:field_issue))) %>
+    </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr class="<%= cycle("odd", "even") -%>">
+          <td class=""><%= product.name %></td>
+          <td class=""><%= product.price %></td>
+          <td class=""><%= product.count %></td>
+          <td class=""><%= format_date product.manufacture_date %></td>
+          <td class=""><%= product.price * product.count %></td>
+          <td class=""><%= link_to product.issue.subject, issue_path(product.issue) %></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+</div>

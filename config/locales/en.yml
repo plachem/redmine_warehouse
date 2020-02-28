@@ -1,0 +1,9 @@
+en:
+  warehouse_title: Warehouse
+  project_module_warehouse: Warehouse
+  label_product_new: New product
+  field_name: Name
+  field_price: Price  
+  field_count: Number
+  field_price_full: Total price
+  field_manufacture_date: Manufacture date

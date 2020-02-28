@@ -1,0 +1,9 @@
+ru:
+  warehouse_title: Склад
+  project_module_warehouse: Склад
+  label_product_new: Новый продукт
+  field_name: Наименование товара
+  field_price: Цена
+  field_count: Кол-во
+  field_price_full: Стоимость
+  field_manufacture_date: Дата производства

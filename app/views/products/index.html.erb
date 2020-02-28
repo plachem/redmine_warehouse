@@ -1,0 +1,12 @@
+<div class="box tabular">
+  <%= title l(:label_product_new) %>
+  <%= form_for @product do |f| %>
+    <p><%= l(:field_issue) %> <%= f.select :issue_id, @issues, {:required => true} %></p>
+    <p><%= l(:field_name) %> <%= f.text_field :name, :size => 80, :maxlength => 100, :required => true %></p>
+    <p><%= l(:field_price) %> <%= f.number_field :price, :size => 40, :maxlength => 10 %></p>
+    <p><%= l(:field_count) %> <%= f.number_field :count, :size => 4, :maxlength => 10, :value => 1 %></p>
+    <p><%= l(:field_manufacture_date) %> <%= f.date_field :manufacture_date %></p>
+    <%= submit_tag l(:button_create) %>
+  <% end %>
+</div>
+<%= render :partial => 'list' %>
